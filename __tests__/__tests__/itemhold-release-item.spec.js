@@ -5,7 +5,7 @@ const { supervisorScan } = require('../model/supervisorScan');
 const { Login } = require('../model/Login');
 
 
-describe('/ (ItemHold/Return-Item)', () => {
+describe('/ (ItemHold/Release-Item)', () => {
     let page
     // page.setDefaultNavigationTimeout(800000)
     beforeAll(async () => {
