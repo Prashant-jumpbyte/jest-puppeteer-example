@@ -20,7 +20,7 @@ describe('/ (ItemHold/Verify-Hold)', () => {
             timeout: 0,
             waitUntil: 'domcontentloaded'
         })
-        await page.evaluate('document.documentElement.webkitRequestFullscreen()');
+        // await page.evaluate('document.documentElement.webkitRequestFullscreen()');
 
     }, timeout)
 

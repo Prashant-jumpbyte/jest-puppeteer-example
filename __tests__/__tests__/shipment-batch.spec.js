@@ -21,7 +21,7 @@ describe('/ (ItemHold/Shipment-batch)', () => {
             timeout: 0,
             waitUntil: 'domcontentloaded'
         })
-        await page.evaluate('document.documentElement.webkitRequestFullscreen()');
+        // await page.evaluate('document.documentElement.webkitRequestFullscreen()');
     }, timeout)
 
     afterAll(async () => {
@@ -29,11 +29,14 @@ describe('/ (ItemHold/Shipment-batch)', () => {
     })
 
     it('Login Step Success', async () => {
-        await page.waitFor(1000)
+        console.log("Login")
         if (await page.$('input[name=email]') !== null) {
-
+            await page.waitFor(1000)
+            console.log("Login")
             await page.waitForSelector("input[name=email]");
             await Login(page, shipmentData.Login.ID, shipmentData.Login.password)
+        } else {
+            console.log("else")
         }
     }, timeout)
 
