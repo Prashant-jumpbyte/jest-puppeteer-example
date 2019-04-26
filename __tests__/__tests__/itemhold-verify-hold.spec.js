@@ -72,9 +72,10 @@ describe('/ (ItemHold/Verify-Hold)', () => {
         if (await page.$('.ng-scope > .row > .col-sm-12 > .col-sm-12 > .col-sm-12') !== null) {
             await page.waitForSelector('.ng-scope > .row > .col-sm-12 > .col-sm-12 > .col-sm-12')
             let notFound = await page.$eval('.ng-scope > .row > .col-sm-12 > .col-sm-12 > .col-sm-12', e => e.innerText)
-            console.log(notFound)
+            
             try {
                 await expect(notFound).not.toEqual('No Shipment is on hold');
+                console.log("verifed success.!")
             } catch (err) {
                 await page.screenshot({
                     fullPage: true,
