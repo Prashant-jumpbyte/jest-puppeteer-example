@@ -7,9 +7,17 @@ const path = require('path')
 
 const DIR = path.join(os.tmpdir(), 'jest_puppeteer_global_setup')
 
-module.exports = async function() {
+module.exports = async function () {
+  var options = {
+    headless: false,
+    args: [
+      '--no-sandbox',
+      '--disable-infobars',
+      '--start-maximized',
+    ],
+  }
   console.log(chalk.green('Setup Puppeteer'))
-  const browser = await puppeteer.launch({})
+  const browser = await puppeteer.launch(options)
   // This global is not available inside tests but only in global teardown
   global.__BROWSER_GLOBAL__ = browser
   // Instead, we expose the connection details via file system to be used in tests
