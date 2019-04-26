@@ -1,0 +1,67 @@
+{
+    "Login": {
+        "ID": "1000",
+        "password": "123456"
+    },
+    "Supervisor": {
+        "ID": "1000",
+        "password": "123456"
+    },
+    "shipment": {
+        "valid": [
+            {
+                "ID": "19001",
+                "trackingId": "PR19004 10",
+                "amount": 12000,
+                "Route": "HOLD"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR19004 11",
+                "amount": 12000,
+                "Route": "HOLD"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR19004 12",
+                "amount": 12000,
+                "Route": "HOLD"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR19004 13",
+                "amount": 12000,
+                "Route": "HOLD"
+            }
+        ],
+        "invalid": [
+            {
+                "ID": "19001",
+                "trackingId": "PR 19001 1",
+                "amount": 12000,
+                "Route": "003"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR 19001 2",
+                "amount": 12000,
+                "Route": "002"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR 19001 3",
+                "amount": 12000,
+                "Route": "001"
+            },
+            {
+                "ID": "19001",
+                "trackingId": "PR 19001 4",
+                "amount": 12000,
+                "Route": "003"
+            }
+        ]
+    },
+    "verifyhold": {
+        "comment": "This is Puppeteer verify hold testing"
+    }
+}
