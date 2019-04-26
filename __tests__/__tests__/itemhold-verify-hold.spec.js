@@ -15,10 +15,10 @@ describe('/ (ItemHold/Verify-Hold)', () => {
             height: 1080
         });
         await page.goto('https://ranger.coordinate.work', {
-            waitLoad: true,
-            waitNetworkIdle: true,
-            timeout: 0,
-            waitUntil: 'domcontentloaded'
+            // waitLoad: true,
+            // waitNetworkIdle: true,
+            // timeout: 0,
+            // waitUntil: 'domcontentloaded'
         })
         // await page.evaluate('document.documentElement.webkitRequestFullscreen()');
 
