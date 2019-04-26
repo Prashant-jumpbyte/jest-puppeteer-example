@@ -29,8 +29,9 @@ describe('/ (ItemHold/Verify-Hold)', () => {
     })
 
     it('Login Step Success', async () => {
+        await page.waitFor(1000)
         if (await page.$('input[name=email]') !== null) {
-            await page.waitFor(1000)
+
             await page.waitForSelector("input[name=email]");
             await Login(page, shipmentData.Login.ID, shipmentData.Login.password)
         }

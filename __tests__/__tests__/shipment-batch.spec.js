@@ -16,13 +16,12 @@ describe('/ (ItemHold/Shipment-batch)', () => {
         });
         console.log("Before -")
         await page.goto('https://ranger.coordinate.work', {
-            // waitLoad: true,
-            // waitNetworkIdle: true,
-            // timeout: 0,
-            // waitUntil: 'domcontentloaded'
+            waitLoad: true,
+            waitNetworkIdle: true,
+            timeout: 0,
+            waitUntil: 'domcontentloaded'
         })
-        // await page.evaluate('document.documentElement.webkitRequestFullscreen()');
-        console.log("Before")
+        await page.evaluate('document.documentElement.webkitRequestFullscreen()');
     }, timeout)
 
     afterAll(async () => {
@@ -30,14 +29,11 @@ describe('/ (ItemHold/Shipment-batch)', () => {
     })
 
     it('Login Step Success', async () => {
-        console.log("Login")
+        await page.waitFor(1000)
         if (await page.$('input[name=email]') !== null) {
-            await page.waitFor(1000)
-            console.log("Login")
+
             await page.waitForSelector("input[name=email]");
             await Login(page, shipmentData.Login.ID, shipmentData.Login.password)
-        }else{
-            console.log("else")
         }
     }, timeout)
 
